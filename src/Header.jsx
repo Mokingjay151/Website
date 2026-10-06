@@ -1,6 +1,11 @@
 
 import profileImg from './assets/profile.jpg';
 
+function scrollToSection(event, sectionId) {
+  event.preventDefault();
+  document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+}
+
 function Header() {
   return (
     <header className="site-header">
@@ -13,8 +18,20 @@ function Header() {
             thoughtful design and real-world impact.
           </p>
           <div className="hero-actions">
-            <a href="#projects" className="primary-button">View projects</a>
-            <a href="#contact" className="secondary-button">Contact me</a>
+            <a
+              href="#projects"
+              className="primary-button"
+              onClick={(event) => scrollToSection(event, 'projects')}
+            >
+              View projects
+            </a>
+            <a
+              href="#contact"
+              className="secondary-button"
+              onClick={(event) => scrollToSection(event, 'contact')}
+            >
+              Contact me
+            </a>
           </div>
         </div>
 
