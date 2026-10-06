@@ -1,26 +1,29 @@
 
-function Header() {
+import profileImg from './assets/profile.jpg';
 
-    return(
-        <header>
-            <h1>Andy Mok's Website 💗</h1>
-            <img src="src/assets/profile.jpg" alt="Andy Mok" style={{ width: '300px', height: '400px' }} />
-            <meta charset="UTF-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-            <title>My Portfolio</title>
-            <button>🌙 Dark Mode</button>
-            
-            <link rel="stylesheet" href="index.css" />
-            <nav>
-                <ul>
-                    <li><a href="#about_me">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <hr></hr>
-         </header>
-    );
+function Header() {
+  return (
+    <header className="site-header">
+      <div className="hero">
+        <div className="hero-copy">
+          <span className="eyebrow">Software developer • ML enthusiast</span>
+          <h1>Andy Mok</h1>
+          <p>
+            Building polished digital experiences and machine learning projects with a focus on
+            thoughtful design and real-world impact.
+          </p>
+          <div className="hero-actions">
+            <a href="#projects" className="primary-button">View projects</a>
+            <a href="#contact" className="secondary-button">Contact me</a>
+          </div>
+        </div>
+
+        <div className="profile-card">
+          <img src={profileImg} alt="Andy Mok portrait" />
+        </div>
+      </div>
+    </header>
+  );
 }
 
 export default Header
